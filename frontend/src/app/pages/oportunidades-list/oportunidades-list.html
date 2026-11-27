@@ -1,0 +1,53 @@
+<section class="intro">
+  <h1>Oportunidades tecnológicas</h1>
+  <p>Información en vivo desde la API REST de Radar TIC (<code>GET /api/oportunidades</code>).</p>
+</section>
+
+@if (cargando()) {
+  <p class="estado">Cargando oportunidades desde el servidor…</p>
+} @else if (error()) {
+  <div class="alerta alerta-error" role="alert">
+    <p>{{ error() }}</p>
+    <button type="button" (click)="cargar()">Reintentar</button>
+  </div>
+} @else {
+  <div class="filtros" role="group" aria-label="Filtrar por categoría">
+    @for (c of categorias(); track c) {
+      <button
+        type="button"
+        class="chip"
+        [class.activo]="c === categoria()"
+        (click)="seleccionarCategoria(c)"
+      >
+        {{ c }}
+      </button>
+    }
+  </div>
+
+  <p class="contador">{{ filtradas().length }} oportunidad(es)</p>
+
+  <div class="grid">
+    @for (o of filtradas(); track o.id) {
+      <article class="card">
+        <header>
+          <span class="categoria">{{ o.categoria }}</span>
+          <span class="estado-badge" [class.no-disponible]="!o.disponible">
+            {{ o.disponible ? 'Disponible' : 'No disponible' }}
+          </span>
+        </header>
+        <h2>{{ o.titulo }}</h2>
+        <p class="entidad">{{ o.entidad }} · {{ o.modalidad }}</p>
+        <p class="descripcion">{{ o.descripcion }}</p>
+        <ul class="tags">
+          @for (t of o.tecnologias; track t) {
+            <li>{{ t }}</li>
+          }
+        </ul>
+        <footer>
+          <span class="fecha">Cierra: {{ o.fechaLimite }}</span>
+          <a class="boton" [routerLink]="['/oportunidad', o.id]">Ver detalle</a>
+        </footer>
+      </article>
+    }
+  </div>
+}

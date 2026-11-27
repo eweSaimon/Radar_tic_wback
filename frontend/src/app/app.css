@@ -1,0 +1,8 @@
+.barra {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem;
+  padding: .9rem 1.5rem; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.marca { font-weight: 700; font-size: 1.25rem; color: var(--text); text-decoration: none; }
+.marca span { color: var(--primary); }
+.arquitectura { font-size: .78rem; color: var(--muted); }
+.contenido { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }

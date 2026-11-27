@@ -1,0 +1,56 @@
+<a routerLink="/" class="volver">← Volver al listado</a>
+
+@if (cargando()) {
+  <p class="estado">Consultando la oportunidad en el servidor…</p>
+} @else if (errorCarga()) {
+  <div class="alerta alerta-error" role="alert">{{ errorCarga() }}</div>
+} @else if (oportunidad(); as o) {
+  <article class="detalle">
+    <header>
+      <span class="categoria">{{ o.categoria }}</span>
+      <span class="estado-badge" [class.no-disponible]="!o.disponible">
+        {{ o.disponible ? 'Disponible' : 'No disponible' }}
+      </span>
+    </header>
+    <h1>{{ o.titulo }}</h1>
+    <p class="entidad">{{ o.entidad }} · {{ o.modalidad }} · Cierra: {{ o.fechaLimite }}</p>
+    <p>{{ o.descripcion }}</p>
+    <ul class="tags">
+      @for (t of o.tecnologias; track t) {
+        <li>{{ t }}</li>
+      }
+    </ul>
+  </article>
+
+  <section class="registro">
+    <h2>Registrar mi interés</h2>
+    <form [formGroup]="form" (ngSubmit)="enviar()" novalidate>
+      <label>
+        Nombre
+        <input type="text" formControlName="nombre" placeholder="Laura Gómez" autocomplete="name" />
+        @if (form.controls.nombre.touched && form.controls.nombre.invalid) {
+          <small class="invalido">El nombre es obligatorio.</small>
+        }
+      </label>
+
+      <label>
+        Correo
+        <input type="email" formControlName="correo" placeholder="laura@email.com" autocomplete="email" />
+        @if (form.controls.correo.touched && form.controls.correo.invalid) {
+          <small class="invalido">Ingresa un correo válido.</small>
+        }
+      </label>
+
+      <button type="submit" [disabled]="enviando()">
+        {{ enviando() ? 'Enviando…' : 'Enviar interés' }}
+      </button>
+    </form>
+
+    @if (resultadoOk(); as msg) {
+      <div class="alerta alerta-ok" role="status">✔ {{ msg }}</div>
+    }
+    @if (resultadoError(); as msg) {
+      <div class="alerta alerta-error" role="alert">✖ {{ msg }}</div>
+    }
+  </section>
+}

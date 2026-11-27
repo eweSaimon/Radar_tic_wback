@@ -1,0 +1,130 @@
+{
+  "resultados": [
+    {
+      "nombre": "Angular obtiene la colección desde la API (GET /api/oportunidades)",
+      "ok": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "El listado muestra las 8 oportunidades del servidor",
+      "ok": true,
+      "detalle": "8 tarjetas"
+    },
+    {
+      "nombre": "CORS: la respuesta autoriza el origen http://localhost:4200",
+      "ok": true,
+      "detalle": "http://localhost:4200"
+    },
+    {
+      "nombre": "Angular NO lee ningún JSON local (assets)",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "El filtro por categoría funciona sobre los datos de la API",
+      "ok": true,
+      "detalle": "1 tarjeta(s) en \"Curso\""
+    },
+    {
+      "nombre": "Angular consulta una oportunidad (GET /api/oportunidades/3)",
+      "ok": true,
+      "detalle": "HTTP 200"
+    },
+    {
+      "nombre": "Angular envía un registro (POST /api/intereses) y el servidor responde 201",
+      "ok": true,
+      "detalle": "HTTP 201"
+    },
+    {
+      "nombre": "El payload enviado es { nombre, correo, oportunidadId }",
+      "ok": true,
+      "detalle": "{\"nombre\":\"Laura Gómez\",\"correo\":\"laura@email.com\",\"oportunidadId\":3}"
+    },
+    {
+      "nombre": "La pantalla muestra el mensaje de éxito del servidor",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "POST sobre oportunidad no disponible → el servidor responde 409",
+      "ok": true,
+      "detalle": "HTTP 409"
+    },
+    {
+      "nombre": "La pantalla muestra el error recibido del servidor",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "GET de un id inexistente → el servidor responde 404",
+      "ok": true,
+      "detalle": "HTTP 404"
+    },
+    {
+      "nombre": "La pantalla muestra el mensaje 404 del servidor",
+      "ok": true,
+      "detalle": ""
+    },
+    {
+      "nombre": "Formulario vacío: Angular avisa y no envía el POST",
+      "ok": true,
+      "detalle": "aviso visible: true, POST enviado: false"
+    },
+    {
+      "nombre": "Con el Back-End apagado, el usuario ve un error claro (no una pantalla en blanco)",
+      "ok": true,
+      "detalle": ""
+    }
+  ],
+  "solicitudes": [
+    {
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/oportunidades",
+      "payload": null,
+      "estado": 200,
+      "cors": "http://localhost:4200"
+    },
+    {
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/oportunidades/3",
+      "payload": null,
+      "estado": 200,
+      "cors": "http://localhost:4200"
+    },
+    {
+      "metodo": "POST",
+      "url": "http://localhost:3000/api/intereses",
+      "payload": "{\"nombre\":\"Laura Gómez\",\"correo\":\"laura@email.com\",\"oportunidadId\":3}",
+      "estado": 201,
+      "cors": "http://localhost:4200"
+    },
+    {
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/oportunidades/4",
+      "payload": null,
+      "estado": 200,
+      "cors": "http://localhost:4200"
+    },
+    {
+      "metodo": "POST",
+      "url": "http://localhost:3000/api/intereses",
+      "payload": "{\"nombre\":\"Laura Gómez\",\"correo\":\"laura@email.com\",\"oportunidadId\":4}",
+      "estado": 409,
+      "cors": "http://localhost:4200"
+    },
+    {
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/oportunidades/999",
+      "payload": null,
+      "estado": 404,
+      "cors": "http://localhost:4200"
+    },
+    {
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/oportunidades/3",
+      "payload": null,
+      "estado": 304,
+      "cors": "http://localhost:4200"
+    }
+  ]
+}

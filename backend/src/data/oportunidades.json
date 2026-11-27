@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "titulo": "Beca de formación en Inteligencia Artificial",
+    "categoria": "Beca",
+    "entidad": "MinTIC",
+    "descripcion": "Programa de formación intensiva en fundamentos de IA, aprendizaje automático y ética de datos para profesionales y estudiantes de últimos semestres.",
+    "modalidad": "Virtual",
+    "fechaLimite": "2026-12-15",
+    "tecnologias": ["Python", "Machine Learning", "TensorFlow"],
+    "disponible": true
+  },
+  {
+    "id": 2,
+    "titulo": "Hackathon Smart Cities Medellín",
+    "categoria": "Evento",
+    "entidad": "Ruta N",
+    "descripcion": "Maratón de 48 horas para construir soluciones tecnológicas que mejoren la movilidad y la sostenibilidad urbana.",
+    "modalidad": "Presencial",
+    "fechaLimite": "2026-12-10",
+    "tecnologias": ["IoT", "Open Data", "APIs"],
+    "disponible": true
+  },
+  {
+    "id": 3,
+    "titulo": "Curso de Desarrollo Full-Stack con Angular y Node.js",
+    "categoria": "Curso",
+    "entidad": "SENA",
+    "descripcion": "Ruta de aprendizaje para construir aplicaciones web completas: Front-End con Angular, Back-End con Express y consumo de APIs REST.",
+    "modalidad": "Híbrida",
+    "fechaLimite": "2027-01-20",
+    "tecnologias": ["Angular", "Node.js", "Express", "TypeScript"],
+    "disponible": true
+  },
+  {
+    "id": 4,
+    "titulo": "Reto de Ciberseguridad para Pymes",
+    "categoria": "Reto",
+    "entidad": "Colombia Digital",
+    "descripcion": "Convocatoria para equipos que propongan soluciones de protección de datos y respuesta a incidentes en pequeñas empresas.",
+    "modalidad": "Virtual",
+    "fechaLimite": "2026-11-05",
+    "tecnologias": ["Ciberseguridad", "Cloud", "Pentesting"],
+    "disponible": false
+  },
+  {
+    "id": 5,
+    "titulo": "Pasantía en Ciencia de Datos",
+    "categoria": "Pasantía",
+    "entidad": "Bancolombia",
+    "descripcion": "Pasantía de seis meses en el equipo de analítica avanzada, trabajando con modelos predictivos sobre grandes volúmenes de datos.",
+    "modalidad": "Presencial",
+    "fechaLimite": "2027-02-01",
+    "tecnologias": ["Python", "SQL", "Power BI"],
+    "disponible": true
+  },
+  {
+    "id": 6,
+    "titulo": "Convocatoria de Startups de Tecnología Financiera",
+    "categoria": "Convocatoria",
+    "entidad": "iNNpulsa",
+    "descripcion": "Aceleración y capital semilla para startups fintech en etapa temprana con prototipo funcional.",
+    "modalidad": "Virtual",
+    "fechaLimite": "2026-10-30",
+    "tecnologias": ["Fintech", "Blockchain", "APIs"],
+    "disponible": false
+  },
+  {
+    "id": 7,
+    "titulo": "Certificación en Computación en la Nube",
+    "categoria": "Certificación",
+    "entidad": "Google Cloud",
+    "descripcion": "Programa de preparación y voucher de examen para la certificación Associate Cloud Engineer.",
+    "modalidad": "Virtual",
+    "fechaLimite": "2027-03-15",
+    "tecnologias": ["Google Cloud", "Kubernetes", "DevOps"],
+    "disponible": true
+  },
+  {
+    "id": 8,
+    "titulo": "Semillero de Desarrollo de Videojuegos",
+    "categoria": "Semillero",
+    "entidad": "Universidad EAFIT",
+    "descripcion": "Espacio colaborativo para aprender diseño y programación de videojuegos con Unity y publicar un prototipo jugable.",
+    "modalidad": "Presencial",
+    "fechaLimite": "2027-01-10",
+    "tecnologias": ["Unity", "C#", "Diseño de juegos"],
+    "disponible": true
+  }
+]
